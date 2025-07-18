@@ -1,0 +1,282 @@
+﻿
+
+body {
+    background: url('/images/bg-pwmidia.png') no-repeat center center fixed;
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+.login-container {
+    background-color: transparent;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 150px; /* Ajustei a margem para o footer */
+}
+
+.logo {
+    text-align: center;
+}
+
+    .logo img {
+        max-width: 300px; /* Ajuste o tamanho conforme necessário */
+        margin-bottom: 20px;
+    }
+
+.form-group {
+    width: 100%; /* Garante que os campos ocupem toda a largura do formulário */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.form-control {
+    border-radius: 25px !important;
+    width: 80% !important;
+    margin-left: auto !important; /* Empurra a margem esquerda */
+    margin-right: auto !important; /* Empurra a margem direita */
+    display: block; /* Garante que o elemento se comporte como um bloco */
+}
+
+.btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+    .btn-outline-success:hover {
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-outline-success:focus, .btn-outline-success.focus {
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    }
+
+    .btn-outline-success.disabled, .btn-outline-success:disabled {
+        color: #28a745;
+        background-color: transparent;
+    }
+
+    .btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active, .show > .btn-outline-success.dropdown-toggle {
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+        .btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-success.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+        }
+
+.btn-login {
+    color: #fff !important;
+    background-color: #F84607 !important;
+    border-color: #F84607 !important;
+    border-radius: 25px !important;
+    width: 150px; /* Largura automática para se ajustar ao conteúdo */
+    padding: 8px 15px !important; /* Padding menor */
+    min-width: 80px;
+    text-align: center;
+}
+
+    .btn-login:hover {
+        color: #333 !important;
+        background-color: #F84607 !important;
+        border-color: #F84607 !important;
+    }
+
+
+.btn-recuperacao-senha {
+    color: #fff !important;
+    background-color: #F84607 !important;
+    border-color: #F84607 !important;
+    border-radius: 15px !important;
+    padding: 8px 15px !important; /* Padding menor */
+    min-width: 80px;
+    text-align: center;
+}
+
+    .btn-recuperacao-senha:hover {
+        color: #333 !important;
+        background-color: #F84607 !important;
+        border-color: #F84607 !important;
+    }
+
+.btn-sucess:focus, .btn-sucess.focus {
+    color: #fff;
+    background-color: #F84607;
+    border-color: #F84607;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn-sucess.disabled, .btn-sucess:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-sucess:not(:disabled):not(.disabled):active, .btn-sucess:not(:disabled):not(.disabled).active, .show > .btn-sucess.dropdown-toggle {
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+}
+
+    .btn-sucess:not(:disabled):not(.disabled):active:focus, .btn-sucess:not(:disabled):not(.disabled).active:focus, .show > .btn-sucess.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    }
+
+.button-link-container {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    width: 100%; /* Garante que o container ocupe toda a largura */
+    margin-top: 15px;
+    gap: 10px; /* Espaço entre o link e o botão */
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 20px; /* Ajustei a posição do footer */
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 0.6rem;
+}
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+.pw-midia-logo {
+    margin-top: 10px;
+}
+
+    .pw-midia-logo img {
+        max-width: 150px; /* Ajuste o tamanho conforme necessário */
+    }
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    /* flex-direction: row-reverse; */ /* Remova se quiser a barra à esquerda */
+}
+
+
+
+.login-container input {
+    margin-bottom: 15px;
+}
+
+.login-container a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+    .login-container a:hover {
+        text-decoration: underline;
+    }
+
+.text-danger {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para telas menores (ex: tablets) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px;
+        max-width: 90%; /* O container ocupa mais largura em telas menores */
+        margin-bottom: 80px; /* Ajusta a margem inferior */
+    }
+
+    .logo img {
+        max-width: 200px !important;
+    }
+
+    .forgot-password {
+        font-size: 0.9em;
+        margin-left: 0; /* Garante que não haja margem à esquerda */
+    }
+
+    .btn-login {
+        max-width: 100%; /* Garante que o botão não ultrapasse o container */
+        width: auto; /* Ajusta a largura automaticamente */
+        text-align: center;
+        margin-left: auto; /* Centraliza horizontalmente */
+        margin-right: auto;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+        bottom: 10px;
+    }
+}
+
+/* Estilos para telas ainda menores (ex: celulares) */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 20px;
+        max-width: 95%;
+        margin-bottom: 60px; /* Ajusta ainda mais a margem inferior */
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+
+    .button-link-container {
+        flex-direction: column; /* Coloca o link e o botão em colunas */
+        align-items: stretch; /* Faz com que ocupem a largura total */
+        gap: 10px; /* Adiciona espaço entre eles na vertical */
+    }
+
+    .forgot-password {
+        text-align: center; /* Centraliza o link */
+        font-size: 1em;
+    }
+
+    .btn-login {
+        width: 80%; /* Ajusta a largura do botão para alinhar com os campos */
+        max-width: 300px; /* Define um limite máximo para o botão */
+        text-align: center;
+        margin: 0 auto; /* Centraliza o botão horizontalmente */
+        display: block; /* Garante que o botão se comporte como um bloco */
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        margin-bottom: 50px;
+    }
+}
+
+/* Estilos para telas maiores (se necessário) */
+@media (min-width: 992px) {
+    .login-container {
+        max-width: 500px; /* Aumenta um pouco a largura em telas maiores */
+    }
+
+    .forgot-password {
+        font-size: 1.1em;
+        margin-left: 10px; /* Adiciona margem à esquerda em telas maiores */
+    }
+
+    .btn-login {
+        padding: 10px 25px !important;
+        min-width: 120px;
+    }
+}

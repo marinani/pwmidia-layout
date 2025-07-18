@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>PW Métricas</title>
+	<script type="importmap"></script>
+	<link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/customizacao.css" />
+	<link rel="icon" href="/images/icon_pwmetricas.svg" type="image/x-icon">
+
+
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
+	integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg="
+	crossorigin="anonymous" />
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+	integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI="
+	crossorigin="anonymous" />
+
+    <style>
+       
+        canvas {
+          max-width: 800px;
+          margin: auto;
+        }
+      </style>
+
+</head>
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+
+	<!--begin::App Wrapper-->
+	<div class="app-wrapper">
+		<!--begin::Header-->
+		<nav class="app-header navbar navbar-expand bg-body">
+			<div class="container-fluid">
+				<!-- Botão de menu lateral -->
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+							<i class="bi bi-list iconMenuRosa"></i>
+						</a>
+					</li>
+				</ul>
+				<!-- Logo centralizada -->
+				<div class="navbar-brand logo-container">
+					<a href="/Home/Index">
+						<img src="/images/logopwmetricas.png" alt="Logo PW Métricas" class="logo-center img-fluid">
+					</a>
+				</div>
+				<!-- Botões à direita -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<button id="theme-toggle" class="btn btn-outline-secondary">
+							<i id="theme-icon" class="bi bi-sun"></i>
+						</button>
+					</li>
+					<li class="nav-item dropdown user-menu">
+						<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+							<img src="/images/user2-160x160.jpg"
+							class="user-image rounded-circle shadow"
+							alt="Imagem do usuário" />
+
+						</a>
+						<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+							<li class="user-header text-bg-primary">
+								<img src="/images/user2-160x160.jpg"
+								class="rounded-circle shadow"
+								alt="Imagem do usuário" />
+								<p>
+									 Simon Junior
+									<small>Administrador</small>
+								</p>
+							</li>
+
+							<li class="user-footer">
+								<a href="#" class="btn btn-default btn-flat">Meu Perfil</a>
+								<a href="login.html" class="btn btn-default btn-flat float-end">Sair</a>
+							</li>
+
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark">
+			<div class="sidebar-wrapper">
+				<nav class="mt-2">
+					<ul class="nav sidebar-menu flex-column"
+					data-lte-toggle="treeview"
+					role="menu"
+					data-accordion="false">
+
+						<li class="nav-item">
+							<a href="/dashboard.html" class="nav-link">
+								<i class="nav-icon bi bi-house"></i>
+								<p>Dashboard</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="/dash_atendimentos.html" class="nav-link">
+								<i class="nav-icon bi bi-house"></i>
+								<p>Dashboard Atendimento</p>
+							</a>
+						</li>
+
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="nav-icon bi bi-person-fill"></i>
+									<p>
+										Atendimento
+										<i class="nav-arrow bi bi-chevron-right"></i>
+										
+									</p>
+								</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a href="atendimento.html" class="nav-link">
+											<i class="nav-icon bi bi-arrow-right"></i>
+											<p>Novo</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+						
+
+
+						
+						
+
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<main class="app-main">
+
+ <!--início da tela-->
+
+ <h2>Gráfico de Métricas - Progressive Web</h2>
+  <canvas id="graficoPwMetricas"></canvas>
+
+ <!--fim da tela-->
+
+			
+		</main>
+        <footer class="app-footer">
+           
+          
+            <strong>
+               &copy; Pw Metricas - Todos os direitos reservados &nbsp; | 
+              <a href="#" class="text-decoration-none">Ajuda </a> |  <a href="#" class="text-decoration-none">Privacidade</a>
+            </strong>
+         
+          </footer>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
+			integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="
+			crossorigin="anonymous"></script>
+            <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+          ></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+			integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+			crossorigin="anonymous"></script>
+	<script src="/js/adminlte.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const themeToggle = document.getElementById("theme-toggle");
+			const themeIcon = document.getElementById("theme-icon");
+			const currentTheme = localStorage.getItem("theme") || "light";
+
+			// Aplica o tema salvo no localStorage
+			document.documentElement.setAttribute("data-bs-theme", currentTheme);
+			themeIcon.className = currentTheme === "dark" ? "bi bi-sun" : "bi bi-moon";
+
+			// Alterna o tema ao clicar no botão
+			themeToggle.addEventListener("click", function () {
+				const newTheme = document.documentElement.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+				document.documentElement.setAttribute("data-bs-theme", newTheme);
+				localStorage.setItem("theme", newTheme);
+				themeIcon.className = newTheme === "dark" ? "bi bi-sun" : "bi bi-moon";
+			});
+		});
+	</script>
+
+<script>
+    const ctx = document.getElementById('graficoPwMetricas').getContext('2d');
+
+    const graficoPw = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
+        datasets: [
+          {
+            label: 'PW Versão A',
+            data: [120, 135, 128, 140, 150],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            tension: 0.4
+          },
+          {
+            label: 'PW Versão B',
+            data: [100, 115, 110, 120, 130],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            tension: 0.4
+          },
+          {
+            label: 'PW Versão C',
+            data: [90, 105, 98, 112, 125],
+            borderColor: 'rgba(255, 206, 86, 1)',
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            tension: 0.4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Métricas'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Semanas'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            position: 'top'
+          },
+          title: {
+            display: true,
+            text: 'Desempenho por Versão PW'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>PW Métricas</title>
+	<script type="importmap"></script>
+	<link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/customizacao.css" />
+	<link rel="icon" href="/images/icon_pwmetricas.svg" type="image/x-icon">
+
+
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
+	integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg="
+	crossorigin="anonymous" />
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+	integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI="
+	crossorigin="anonymous" />
+
+
+
+</head>
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+
+	<!--begin::App Wrapper-->
+	<div class="app-wrapper">
+		<!--begin::Header-->
+		<nav class="app-header navbar navbar-expand bg-body">
+			<div class="container-fluid">
+				<!-- Botão de menu lateral -->
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+							<i class="bi bi-list iconMenuRosa"></i>
+						</a>
+					</li>
+				</ul>
+				<!-- Logo centralizada -->
+				<div class="navbar-brand logo-container">
+					<a href="/Home/Index">
+						<img src="/images/logopwmetricas.png" alt="Logo PW Métricas" class="logo-center img-fluid">
+					</a>
+				</div>
+				<!-- Botões à direita -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<button id="theme-toggle" class="btn btn-outline-secondary">
+							<i id="theme-icon" class="bi bi-sun"></i>
+						</button>
+					</li>
+					<li class="nav-item dropdown user-menu">
+						<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+							<img src="/images/user2-160x160.jpg"
+							class="user-image rounded-circle shadow"
+							alt="Imagem do usuário" />
+
+						</a>
+						<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+							<li class="user-header text-bg-primary">
+								<img src="/images/user2-160x160.jpg"
+								class="rounded-circle shadow"
+								alt="Imagem do usuário" />
+								<p>
+									 Simon Junior
+									<small>Administrador</small>
+								</p>
+							</li>
+
+							<li class="user-footer">
+								<a href="#" class="btn btn-default btn-flat">Meu Perfil</a>
+								<a href="login.html" class="btn btn-default btn-flat float-end">Sair</a>
+							</li>
+
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<aside class="app-sidebar bg-body-primary shadow" data-bs-theme="dark">
+			<div class="sidebar-wrapper">
+				<nav class="mt-2">
+					<ul class="nav sidebar-menu flex-column"
+					data-lte-toggle="treeview"
+					role="menu"
+					data-accordion="false">
+
+						<li class="nav-item">
+							<a href="/dashboard.html" class="nav-link">
+								<i class="nav-icon bi bi-house"></i>
+								<p>Dashboard</p>
+							</a>
+						</li>
+                        <li class="nav-item">
+							<a href="/dash_atendimentos.html" class="nav-link">
+								<i class="nav-icon bi bi-house"></i>
+								<p>Dashboard Atendimento</p>
+							</a>
+						</li>
+
+							<li class="nav-item">
+								<a href="#" class="nav-link">
+									<i class="nav-icon bi bi-person-fill"></i>
+									<p>
+										Atendimento
+										<i class="nav-arrow bi bi-chevron-right"></i>
+										
+									</p>
+								</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a href="atendimento.html" class="nav-link">
+											<i class="nav-icon bi bi-arrow-right"></i>
+											<p>Novo</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+						
+
+
+						
+						
+
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<main class="app-main">
+            <nav class="app-header navbar navbar-expand bg-body">
+                <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="left-select mb-2 mb-lg-0">
+                        <select for="LojaId"  id="LojaId" class="form-select">
+                            <option value="">Selecione uma filial</option>
+                        </select>
+                        
+                    </div>
+                 	<div class="right-search">
+                        <input type="text" id="searchField" class="form-control" placeholder="Pesquisar..." />
+                    </div> 
+                </div>
+				
+</nav>
+            <!--início da tela-->
+            <div class="app-content-header">
+                <!--begin::Container-->
+                <div class="container-fluid">
+                    
+                </div>
+                <!--end::Container-->
+            </div>
+            
+            
+            <div class="app-content">
+                <div class="container-fluid">
+            
+                    <div class="row">
+                        <div class="col-sm-10 offset-sm-1">
+                            
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item atendimento">
+                                <h2 class="accordion-header d-flex justify-content-between align-items-center" id="headingOne">
+                                    <button class="accordion-button-atendimento" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        EM ATENDIMENTO
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                        <table class="table table-striped table-atendimento">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Data</th>
+                                                    <th scope="col">Retornar</th>
+                                                    <th scope="col">R$ Pedido</th>
+                                                    <th scope="col">Visualizar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fernanda</td>
+                                                    <td class="status-atendimento-bg">Em Atendimento</td>
+                                                    <td>09/04/2025</td>
+                                                    <td>22/04/2025</td>
+                                                    <td>R$ 1.299</td>
+                                                    <td><i class="bi bi-eye"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <span class="badge bg-atendimento text-white ms-3">Soma Total: R$ 10.680</span>
+                            <div class="accordion-item orcamento">
+                                <h2 class="accordion-header d-flex justify-content-between align-items-center" id="headingTwo">
+                                    <button class="accordion-button-orcamento collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        ORÇAMENTO
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                        <table class="table table-striped table-orcamento">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Data</th>
+                                                    <th scope="col">Retornar</th>
+                                                    <th scope="col">R$ Pedido</th>
+                                                    <th scope="col">Visualizar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fernanda</td>
+                                                    <td class="status-orcamento-bg">Orçamento</td>
+                                                    <td>09/04/2025</td>
+                                                    <td>22/04/2025</td>
+                                                    <td>R$ 1.299</td>
+                                                    <td><i class="bi bi-eye"></i></td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <span class="badge bg-orcamento text-white ms-3">Soma Total: R$ 10.680</span>
+                            <div class="accordion-item vendido">
+                                <h2 class="accordion-header d-flex justify-content-between align-items-center" id="headingThree">
+                                    <button class="accordion-button-vendido collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        VENDIDO
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                        <table class="table table-striped table-vendido">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Data</th>
+                                                    <th scope="col">Retornar</th>
+                                                    <th scope="col">R$ Pedido</th>
+                                                    <th scope="col">Visualizar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fernanda</td>
+                                                    <td class="status-vendido-bg">Vendido</td>
+                                                    <td>09/04/2025</td>
+                                                    <td>22/04/2025</td>
+                                                    <td>R$ 1.299</td>
+                                                    <td><i class="bi bi-eye"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="badge bg-vendido text-white ms-3">Soma Total: R$ 10.680</span>
+                            <div class="accordion-item negociado">
+                                <h2 class="accordion-header d-flex justify-content-between align-items-center" id="headingFour">
+                                    <button class="accordion-button-negociado collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        PERDIDO NEGOCIADO
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                        <table class="table table-striped table-negociado">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Data</th>
+                                                    <th scope="col">Retornar</th>
+                                                    <th scope="col">R$ Pedido</th>
+                                                    <th scope="col">Visualizar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fernanda</td>
+                                                    <td class="status-negociado-bg">Perdido Negociado</td>
+                                                    <td>09/04/2025</td>
+                                                    <td>22/04/2025</td>
+                                                    <td>R$ 1.299</td>
+                                                    <td><i class="bi bi-eye"></i> <i class="bi bi-exclamation-triangle-fill"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gustavo</td>
+                                                    <td class="status-negociado-bg">Perdido Negociado</td>
+                                                    <td>06/04/2025</td>
+                                                    <td>01/05/2025</td>
+                                                    <td>R$ 1.640</td>
+                                                    <td><i class="bi bi-eye"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Henrique</td>
+                                                    <td class="status-negociado-bg">Perdido Negociado</td>
+                                                    <td>02/04/2025</td>
+                                                    <td>30/04/2025</td>
+                                                    <td>R$ 1.400</td>
+                                                    <td><i class="bi bi-eye"></i> <i class="bi bi-exclamation-triangle-fill"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="badge bg-negociado text-white ms-3">Soma Total: R$ 10.680</span>
+                            <div class="accordion-item naoresponde">
+                                <h2 class="accordion-header d-flex justify-content-between align-items-center" id="headingFive">
+                                    <button class="accordion-button-naoresponde collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        PERDIDO NÃO RESPONDE
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive">
+                                    <div class="accordion-body">
+                                        <div class="table-responsive">
+                                        <table class="table table-striped table-naoresponde">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Data</th>
+                                                    <th scope="col">Retornar</th>
+                                                    <th scope="col">R$ Pedido</th>
+                                                    <th scope="col">Visualizar</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Fernanda</td>
+                                                    <td class="status-naoresponde">Perdido ñ responde</td>
+                                                    <td>09/04/2025</td>
+                                                    <td>22/04/2025</td>
+                                                    <td>R$ 1.299</td>
+                                                    <td><i class="bi bi-eye"></i> <i class="bi bi-exclamation-triangle-fill"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gustavo</td>
+                                                    <td class="status-naoresponde-bg">Perdido ñ responde</td>
+                                                    <td>06/04/2025</td>
+                                                    <td>01/05/2025</td>
+                                                    <td>R$ 1.640</td>
+                                                    <td><i class="bi bi-eye"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Henrique</td>
+                                                    <td class="status-naoresponde-bg">Perdido ñ responde</td>
+                                                    <td>02/04/2025</td>
+                                                    <td>30/04/2025</td>
+                                                    <td>R$ 1.400</td>
+                                                    <td><i class="bi bi-eye"></i> <i class="bi bi-exclamation-triangle-fill"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="badge bg-naoresponde text-white ms-3">Soma Total: R$ 10.680</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <a href="" class="custom-button ms-auto">
+                        NOVO ATENDIMENTO
+                        <img src="/icones/atendimento.png" alt="Ícone">
+                    </a>
+                </div>
+            
+                </div>
+            </div>
+ 
+            
+            <!--final da tela-->
+
+
+			
+		</main>
+        <footer class="app-footer">
+           
+          
+            <strong>
+               &copy; Pw Metricas - Todos os direitos reservados &nbsp; | 
+              <a href="#" class="text-decoration-none">Ajuda </a> |  <a href="#" class="text-decoration-none">Privacidade</a>
+            </strong>
+         
+          </footer>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
+			integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="
+			crossorigin="anonymous"></script>
+            <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+          ></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+			integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+			crossorigin="anonymous"></script>
+	<script src="/js/adminlte.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const themeToggle = document.getElementById("theme-toggle");
+			const themeIcon = document.getElementById("theme-icon");
+			const currentTheme = localStorage.getItem("theme") || "light";
+
+			// Aplica o tema salvo no localStorage
+			document.documentElement.setAttribute("data-bs-theme", currentTheme);
+			themeIcon.className = currentTheme === "dark" ? "bi bi-sun" : "bi bi-moon";
+
+			// Alterna o tema ao clicar no botão
+			themeToggle.addEventListener("click", function () {
+				const newTheme = document.documentElement.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+				document.documentElement.setAttribute("data-bs-theme", newTheme);
+				localStorage.setItem("theme", newTheme);
+				themeIcon.className = newTheme === "dark" ? "bi bi-sun" : "bi bi-moon";
+			});
+		});
+	</script>
+</body>
+</html>

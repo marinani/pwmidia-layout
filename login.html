@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login PW Mídia</title>
+	<link rel="icon" href="/images/cropped-icon-32x32.webp" type="image/x-icon">
+	<link rel="stylesheet" href="css/login.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="login-container">
+		<div class="logo">
+			<img src="images/logo_pwmidia.png" alt="Logo PW Mídia">
+		</div>
+
+		
+
+		<form asp-action="Autenticar" method="post">
+			<div class="form-group">
+				<input asp-for="Email" class="form-control" placeholder="E-mail:" />
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input asp-for="Senha" type="password" class="form-control" placeholder="Senha:" />
+				<span asp-validation-for="Senha" class="text-danger"></span>
+			</div>
+			
+			<div class="button-link-container">
+				<a href="#" class="forgot-password">Esqueceu sua senha?</a>
+				<a href="/index.html" class="btn btn-login" id="btnEntrar">ENTRAR</a>
+				<!-- <button type="button" class="btn btn-login" id="btnEntrar">ENTRAR</button> -->
+			</div>
+		</form>
+	</div>
+	<div class="footer">
+		© 2025  PW Mídia - Todos os direitos reservados
+		<div class="pw-midia-logo">
+			<img src="/images/PW_branco.svg" alt="Logo PW Midia">
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+	<script>
+
+			$(document).ready(function () {
+			const button = document.getElementById("btnEntrar");
+
+			document.addEventListener("keypress", function (e) {
+				if (e.key === 'Enter') {
+					e.preventDefault();
+					button.click();
+				}
+			});
+
+		});
+
+	</script>

@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>PW Mídia</title>
+	<script type="importmap"></script>
+	<link rel="stylesheet" href="/css/adminlte.css" />
+		<link rel="icon" href="/images/cropped-icon-32x32.webp" type="image/x-icon">
+
+
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
+	integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg="
+	crossorigin="anonymous" />
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+	integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI="
+	crossorigin="anonymous" />
+
+
+
+</head>
+<body class="layout-fixed sidebar-expand-lg">
+
+	<!--begin::App Wrapper-->
+	<div class="app-wrapper">
+		<!--begin::Header-->
+		<nav class="app-header navbar navbar-expand">
+			<div class="container-fluid">
+				<!-- Botão de menu lateral -->
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
+							<i class="bi bi-list iconMenuRosa"></i>
+						</a>
+					</li>
+				</ul>
+				<!-- Logo centralizada -->
+				<div class="navbar-brand logo-container">
+					<a href="/Home/Index">
+						<img src="/images/logo_pwmidia.png" alt="Logo PW Mídia" class="logo-center img-fluid">
+					</a>
+				</div>
+				<!-- Botões à direita -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<button id="theme-toggle" class="btn btn-outline-secondary">
+							<i id="theme-icon" class="bi bi-sun"></i>
+						</button>
+					</li>
+					<li class="nav-item dropdown user-menu">
+						<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+							<img src="/images/user2-160x160.jpg"
+							class="user-image rounded-circle shadow"
+							alt="Imagem do usuário" />
+
+						</a>
+						<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+							<li class="user-header text-bg-primary">
+								<img src="/images/user2-160x160.jpg"
+								class="rounded-circle shadow"
+								alt="Imagem do usuário" />
+								<p>
+									 Dyego Pessoa
+									<small>Administrador</small>
+								</p>
+							</li>
+
+							<li class="user-footer">
+								<a href="#" class="btn btn-default btn-flat">Meu Perfil</a>
+								<a href="login.html" class="btn btn-default btn-flat float-end">Sair</a>
+							</li>
+
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+<aside class="app-sidebar bg-body-primary shadow" data-bs-theme="dark" style="background-color:#222222 !important;">
+    <div class="sidebar-wrapper">
+        <nav class="mt-2">
+            <ul class="nav sidebar-menu flex-column"
+                data-lte-toggle="treeview"
+                role="menu"
+                data-accordion="false">
+
+                <li class="nav-item">
+                    <a href="/Home/Index" class="nav-link">
+                        <img src="/icones/casa.png" alt="Headset" style="width: 24px; height: 24px; margin-right: 8px;" />
+                        <p>Home</p>
+                    </a>
+                </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="/icones/gestao.png" alt="Headset" style="width: 24px; height: 24px; margin-right: 8px;" />
+                            <p>
+                                Gestão
+                                <i class="nav-arrow bi bi-chevron-right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/GestaoCanal/Consulta" class="nav-link">
+                                    <img src="/icones/flecha-direita.png" alt="Flecha" style="width: 24px; height: 24px; margin-right: 8px;" />
+                                    <p>Canal</p>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+
+                 
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="/icones/pizza.png" alt="Headset" style="width: 24px; height: 24px; margin-right: 8px;" />
+                            <p>
+                                Relatórios
+                                <i class="nav-arrow bi bi-chevron-right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/Dashboard/Index" class="nav-link">
+                                    <img src="/icones/flecha-direita.png" alt="Headset" style="width: 24px; height: 24px; margin-right: 8px;" />
+                                    <p>Visão Geral</p>
+                                </a>
+                            </li>
+                          
+
+                        </ul>
+                    </li>
+
+
+
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="/icones/administrador.png" alt="Headset" style="width: 24px; height: 24px; margin-right: 8px;" />
+                            <p>
+                                Administradores
+                                <i class="nav-arrow bi bi-chevron-right"></i>
+
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/Usuario/Consulta" class="nav-link">
+                                    <img src="/icones/flecha-direita.png" alt="Headset" style="width: 24px; height: 24px; margin-right: 8px;" />
+                                    <p>Pesquisa</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+               
+
+
+            </ul>
+        </nav>
+    </div>
+</aside>
+		<main class="app-main">
+        <nav class="app-loja navbar navbar-expand bg-body">
+	<div class="container-fluid d-flex flex-wrap justify-content-between align-items-center">
+		<div class="left-select mb-2 mb-lg-0">
+                        <select for="LojaId"  id="LojaId" class="form-select">
+                            <option value="">Selecione uma filial</option>
+                        </select>
+                        
+                    </div>
+                 	<div class="right-search">
+                        <input type="text" id="searchField" class="form-control" placeholder="Pesquisar..." />
+                    </div> 
+                </div>
+				
+</nav>
+            <!--início da tela-->
+            <div class="app-content-header">
+                <!--begin::Container-->
+                <div class="container-fluid">
+                    
+                </div>
+                <!--end::Container-->
+            </div>
+            
+            
+            <div class="app-content">
+				<div class="container-fluid">
+
+
+					<div class="row">
+                        <div class="col-sm-10 offset-sm-1">
+                            
+                     
+					</div>
+				</div>
+
+                 <br/><br/>
+
+			
+					
+
+				</div>
+            </div>
+ 
+            
+            <!--final da tela-->
+
+
+			
+		</main>
+      	<footer class="app-footer text-center text-sm-center">
+		<strong>
+			&copy; Pw Mídia 2025 - Todos os direitos reservados
+		</strong>
+
+	</footer>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
+			integrity="sha256-dghWARbRe2eLlIJ56wNB+b760ywulqK3DzZYEpsg2fQ="
+			crossorigin="anonymous"></script>
+            <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+          ></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+			integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+			crossorigin="anonymous"></script>
+	<script src="/js/adminlte.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+	
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const themeToggle = document.getElementById("theme-toggle");
+			const themeIcon = document.getElementById("theme-icon");
+			const currentTheme = localStorage.getItem("theme") || "light";
+
+			// Aplica o tema salvo no localStorage
+			document.documentElement.setAttribute("data-bs-theme", currentTheme);
+			themeIcon.className = currentTheme === "dark" ? "bi bi-sun" : "bi bi-moon";
+
+			// Alterna o tema ao clicar no botão
+			themeToggle.addEventListener("click", function () {
+				const newTheme = document.documentElement.getAttribute("data-bs-theme") === "dark" ? "light" : "dark";
+				document.documentElement.setAttribute("data-bs-theme", newTheme);
+				localStorage.setItem("theme", newTheme);
+				themeIcon.className = newTheme === "dark" ? "bi bi-sun" : "bi bi-moon";
+			});
+		});
+	</script>
+</body>
+</html>
